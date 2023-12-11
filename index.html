@@ -1,156 +1,132 @@
-<!DOCTYPE HTML>
-<html lang="english">
- <head>
-   <meta charset="UTF-8"/>
-   <meta name="viewport" content="width=device-witdh, initial-scale=1.0" />
-   <title>Monica</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-<h2>Bob Monica</h2>
-<img width="100"  src="images/WhatsApp Image 2023-10-09 at 19.16.36.jpeg" alt="selfie" />
-<p id="job-title">Marketing@Woodera</p>
-
-<ul id="top-menu-bar"> 
-  <li><a href="#"class="active">HOME</a></li>
-  <li><a href="#">Skills</a></li>
-  <li><a href="#">Projects</a></li>
-  <li><a href="#">Languages</a></li>
-</ul>
-</header>
-
-<section id="content">
-  <div id="side-menu">
-  <section>
-    <form action="secretara.html">
-      <h2>Contact</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monica Bob</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div style="display: flex">
       <div>
-        <label for="userEmail">Email</label>
-        <input 
-        type="email" 
+        <img height="100" src="images/WhatsApp Image 2023-10-09 at 19.16.36.jpeg" alt="selfie" />
+      <h1>Bob Monica.</h1>
+      
+      <p id="job-title">Marketing @ Woodera</p>
 
-<h2>Skills</H2>
-<ul>
-    <li class="favorite">HTML</li>
-    <li class="favorite">CSS</li>
-    <li >Java</li>
-</ul>
+      <ul id="top-menu-bar">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#" onclick="showSkills()">Skills</a></li>
+        <li><a href="#" class="active">Projects</a></li>
+        <li><a href="#"onclick="showLanguages()">Languages</a></li>
+      </ul>
+    </header>
 
-<h2>Known Languages</h2>
-<table border="1">
-    <tr>
-        <th>Language
-        <th>Level</th>
-    </tr>
-    <tr>
-        <td class="favorite">Romanian</td>
-    <td>Native</td>
-  </tr>
-  <tr>
-    <td>English</td>
-    <td>Professional</td>
-  </tr>
-</table>
+    <section id="content">
+      <div id="side-menu">
+        <section>
+          <form action="secretara.html">
+            <h2>Contact</h2>
+            <div>
+              <label for="userEmail">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="userEmail"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
 
-Open my
-<a href="https://www.linkedin.com/"target="_blank">  
-    LinkedIn</a>
-               
-    
-    
-    
-    account.
+            <div>
+              <label for="userName">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                id="userName"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
 
-    <form action="secretara.html">
-        <h2>Contact</h2>
-        <div>
-          <label for="userEmail">Email</label>
-          <input 
-          type="email" 
-          name="email"
-          id= "userEmail" 
-          placeholder="your@email.com"/>
-        </div>
+            <button type="submit">Send</button>
+          </form>
+        </section>
+        <section>
+          <p>
+            start server: CTRL + Shift + P -> Browser Sync mode in Browser ->
+            Enter -> / -> Enter
+          </p>
+        </section>
+      </div>
+      <div id="skills" style="display: none;">
+        <h2>Skills</h2>
+        <ul>
+          <li class="favorite">HTML</li>
+          <li>CSS</li>
+          <li class="favorite">JS</li>
+        </ul>
+      </div>
+      <div id = "projects">
+        <h2>Projects</h2>
+        <p>...</p>
+      </div>
 
-        </div>
-          <label for="userName">Your Name</label>
-          <input 
-          type="text"
-           name="name" 
-           id="userName"
-           placeholder="your@email.com"/>
-           
-           
-        </div>
+      <div id="languages" style ="display: none;" >
+        <h2>Known Languages</h2>
+        <table border="1">
+          <tr>
+            <th>Language</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td class="favorite">Romanian</td>
+            <td>Native</td>
+          </tr>
+          <tr>
+            <td>English</td>
+            <td>Profesional</td>
+          </tr>
+        </table>
+      </div>
+    </section>
 
-        <button type="submit">Send </button>
-    </form>
-  </section>
+    <footer>
+      Open my
+      <a href="https://www.linkedin.com/" target="_blank"
+        >LinkedIn</a
+      >
+      account.
+    </footer>
 
-  <section>
-    <p>
-    </p>
-  </section>
- </div>
-<div id="main">
-  <h2>Skills</h2>
-  <ul>
-    <li class="favorite">HTML</li>
-    <LI>CSS</li>
-    <li class="favorite">JS</li>
-  </ul>
+    <script>
+      console.info(2 + 3);
+      console.warn("Bob Monica");
 
+      var employed = true;
+      var age = 18;
+      console.log("Angajat:", employed);
+      employed = false;
+      console.log("Angajat:", employed);
+      employed = "da";
+      console.log("Angajat:", employed);
 
-<h2>Known Languages</h2>
-<table border="1">
-<tr>
-  <th>Language</th>
-  <th>Level</th>
-</tr>
-<tr>
-  <td>Romanian</td>
-<td>Native</td>
-</tr>
-<tr>
-<td>English</td>
-<td>Profesional</td>
-</tr>
-</table>
-</div>
-</section>
+      var skills = ["html", "css"];
+      console.debug("tipul variabilei skills:", typeof skills);
 
-<footer>
-Open my
- <a href="https://www.linkedin.com/"target="_blank">
-LinkedIn</a>
->
-account.
-</footer>
-
-<script>
-  console.info(2+3);
-  console.warn ("monica");
-
- var employed = true;
- var age = 18;
- console.log("Angajat:", employed);
- employed=false
- onsole.log("Angajat:", employed);
- employed='da'
- console.log("Angajat:", employed);
-
- var Skills = ['html', 'css'];
- console.debug('tipul variabilei skills', typeof Skills);
-
-var job = document.getElementById('job-title')
-console.warn('job', job);
-console.info(typeof job)
-</script>
-</body>
+      var job = document.getElementById("job-title");
+      console.warn("job", job);
+      console.info(typeof job);
+    </script>
+  </body>
 </html>
 
-<p>
-    notes> start server: CTRL + Shift + P -> Browser Sync mode in Browser ->
-    Enter -> /
-</p>
+
+
+
+
+
+
+
+
