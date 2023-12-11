@@ -21,5 +21,5 @@ function showPage(id) {
   activePage = id;
 }
 
-//exceutii
+//excutii
 showPage("activePage")
