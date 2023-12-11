@@ -1,15 +1,25 @@
 
-function showSkills() {
-    var oldPage = document.getElementById(projects)
-    oldPage.style.d = "none"
-    
-var page = document.getElementById("skills");
-page.style.display = "block"
+// variabile publice
+var activePage = "projects";
+//functii publice
+function hide(id) {
+  console.info("hide", id);
+  document.getElementById(id).style.display = "none";
 }
-function showLanguages() {
-    var oldPage = document.getElementById(projects)
-    oldPage.style.d = "none"
-    
-var page = document.getElementById("languages");
-page.style.display = "block"
+
+function show(id) {
+  console.info("show", id);
+  var page = document.getElementById(id);
+  console.debug("show page", page);
+  page.style.display = "block";
 }
+
+function showPage(id) {
+  console.info("show page", id);
+  hide(activePage);
+  show(id);
+  activePage = id;
+}
+
+//exceutii
+showPage("activePage")

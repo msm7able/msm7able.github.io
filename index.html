@@ -3,23 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monica Bob</title>
+    <title>Monica</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <div style="display: flex">
-      <div>
-        <img height="100" src="images/WhatsApp Image 2023-10-09 at 19.16.36.jpeg" alt="selfie" />
-      <h1>Bob Monica.</h1>
-      
-      <p id="job-title">Marketing @ Woodera</p>
+        <div>
+          <img height="100" src="images/WhatsApp Image 2023-10-09 at 19.16.36.jpeg" alt="selfie" />
+        </div>
+        <div>
+          <h1>Monica Bob</h1>
+          <p id="job-title">Marketing @ Woodera</p>
+        </div>
+      </div>
 
       <ul id="top-menu-bar">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#" onclick="showSkills()">Skills</a></li>
-        <li><a href="#" class="active">Projects</a></li>
-        <li><a href="#"onclick="showLanguages()">Languages</a></li>
+        <li><a href="#" onclick="showPage('home')">HOME</a></li>
+        <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+        <li>
+          <a href="#" onclick="showPage('projects')" class="active">Projects</a>
+        </li>
+        <li><a href="#" onclick="showPage('languages')">Languages</a></li>
       </ul>
     </header>
 
@@ -60,35 +65,43 @@
           </p>
         </section>
       </div>
-      <div id="skills" style="display: none;">
-        <h2>Skills</h2>
-        <ul>
-          <li class="favorite">HTML</li>
-          <li>CSS</li>
-          <li class="favorite">JS</li>
-        </ul>
-      </div>
-      <div id = "projects">
-        <h2>Projects</h2>
-        <p>...</p>
-      </div>
+      <div id="main">
+        <div id="home" class="page" style="display: none">
+          <h2>Home</h2>
+          <p>Welcome...</p>
+        </div>
 
-      <div id="languages" style ="display: none;" >
-        <h2>Known Languages</h2>
-        <table border="1">
-          <tr>
-            <th>Language</th>
-            <th>Level</th>
-          </tr>
-          <tr>
-            <td class="favorite">Romanian</td>
-            <td>Native</td>
-          </tr>
-          <tr>
-            <td>English</td>
-            <td>Profesional</td>
-          </tr>
-        </table>
+        <div id="skills" class="page" style="display: none">
+          <h2>Skills</h2>
+          <ul>
+            <li class="favorite">HTML</li>
+            <li>CSS</li>
+            <li class="favorite">JS</li>
+          </ul>
+        </div>
+
+        <div id="projects" class="page">
+          <h2>Projects</h2>
+          <p>...</p>
+        </div>
+
+        <div style="display: none" class="page" id="languages">
+          <h2>Known Languages</h2>
+          <table border="1">
+            <tr>
+              <th>Language</th>
+              <th>Level</th>
+            </tr>
+            <tr>
+              <td class="favorite">Romanian</td>
+              <td>Native</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td>Profesional</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -97,36 +110,9 @@
       <a href="https://www.linkedin.com/" target="_blank"
         >LinkedIn</a
       >
-      account.
+      account
     </footer>
 
-    <script>
-      console.info(2 + 3);
-      console.warn("Bob Monica");
-
-      var employed = true;
-      var age = 18;
-      console.log("Angajat:", employed);
-      employed = false;
-      console.log("Angajat:", employed);
-      employed = "da";
-      console.log("Angajat:", employed);
-
-      var skills = ["html", "css"];
-      console.debug("tipul variabilei skills:", typeof skills);
-
-      var job = document.getElementById("job-title");
-      console.warn("job", job);
-      console.info(typeof job);
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
